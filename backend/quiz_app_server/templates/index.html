@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hi, {{ question.question }}!</h1>
+    {% for tag in question.tags %}
+    <div><p>one of the tags is : <b>{{ tag }}</b></p></div>
+    {% endfor %}
+{% endblock %}
