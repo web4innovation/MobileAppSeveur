@@ -1,7 +1,7 @@
 #!flask/bin/python
 import imp
 from migrate.versioning import api
-from quiz_app_server import db
+from quiz_app_server_flaskViews import db
 from config import SQLALCHEMY_DATABASE_URI
 from config import SQLALCHEMY_MIGRATE_REPO
 
