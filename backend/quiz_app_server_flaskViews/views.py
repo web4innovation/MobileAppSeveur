@@ -4,6 +4,12 @@ from . import models
 import hashlib
 
 
+@app.route('/')
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
+
 @app.route('/api/register', methods=['POST'])
 def register():
     r = request.get_json()
@@ -16,7 +22,7 @@ def register():
         u = models.User(user_nickname, user_email, user_token, user_pass_hash)
         db.session.add(u)
         db.session.commit()
-        status = 'success'
+        status = {'token': u.token}
         code = 201
     except:
         status = 'this user is already registered'
@@ -27,9 +33,11 @@ def register():
 
 @app.route('/api/authenticate', methods=['POST'])
 def authenticate():
+
     json_data = request.get_json()
     user = models.User.query.filter_by(email=json_data['email']).first()
-    if user and hashlib.sha1(str(json_data['password']).encode('utf-8')).hexdigest() == user.user_mp_hash:
+    print (json_data['email'])
+    if user and hashlib.sha1(str(json_data['pass']).encode('utf-8')).hexdigest() == user.user_mp_hash:
         status = {'token': user.token}
         code = 200
     else:
