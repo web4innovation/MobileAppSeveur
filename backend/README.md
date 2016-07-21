@@ -7,9 +7,11 @@ The web server is developed using python3.4 and the flask library.
 This work was inspired by http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
 
 # Installation
-clone the git repo
-create a virtual environment in the same directory and name it flask: python3 -m venv flask
-install the following dependencies to the freshly prepared venv (execute the following commands one by one):
+- clone the git repo ```git clone https://github.com/lwiss/web4innovation_mobile.git```.
+- go to backend directory ```cd web4innovation_mobile/backend```
+- ceate a virtual environment in the same directory and name it flask: ```ython3 -m venv flask```
+- install the following dependencies to the freshly prepared venv (execute the following commands one by one):
+```
     flask/bin/pip install flask
     flask/bin/pip install flask-login
     flask/bin/pip install flask-openid
@@ -22,7 +24,8 @@ install the following dependencies to the freshly prepared venv (execute the fol
     flask/bin/pip install guess_language
     flask/bin/pip install flipflop
     flask/bin/pip install coverage
-Run ./run.py to start the server (on Windows use flask\Scripts\python rest.py instead)
-Open http://localhost:5000/index.html on your web browser to run the client. This should show the REST api implemented
+```
+- Run ```./run.py```  to sart the server (on Windows use ``flask\Scripts\python rest.py`` insead)
+- Open http://localhost:5000/index.html on your web browser to run the client. This should show the REST api implemented
 so far.
 
