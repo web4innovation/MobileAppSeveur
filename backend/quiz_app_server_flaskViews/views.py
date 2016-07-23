@@ -59,6 +59,7 @@ def get_random_question():
 
 @app.route('/api/question', methods=['POST'])
 def add_new_question():
+
     r = request.get_json()
     email = str(r['email'])
     token = str(r['token'])
@@ -70,19 +71,24 @@ def add_new_question():
         q = models.Question(question=question, question_type=q_type, author=user)
         db.session.add(q)
         db.session.commit()
-        q = models.Question.query.filter_by(question=question,owner_id=user.id).first()
         for a in answers:
             ans_text = a['answer_text']
             correct = a['correct']
             ans = models.Answer(answer_text=ans_text, correct=correct, quest=q)
             db.session.add(ans)
             db.session.commit()
-        q = models.Question.query.filter_by(question=question,owner_id=user.id).first()
         return make_response(jsonify(q.to_dict()),201)
     else:
-        make_response(jsonify({'result': 'denied'}), 403)
+        return make_response(jsonify({'result': 'denied'}), 403)
 
 
-@app.route('/api/question')
-def get_questions_ownedby():
-    return None
+@app.route('/api/question/ownedby/<owner_nickname>', methods=['GET'])
+def get_questions_ownedby(owner_nickname):
+    print (owner_nickname)
+    user = models.User.query.filter_by(nickname=owner_nickname).first()
+    if user:
+        r = [q.to_dict() for q in user.user_questions]
+        print (r)
+    else:
+        r = []
+    return make_response(jsonify({"result":r}), 200)
