@@ -54,6 +54,7 @@ def get_random_question():
     q_ids = models.Question.query.with_entities(models.Question.id).all()
     to_select = np.random.randint(low=1, high=len(q_ids)+1)
     q = models.Question.query.get(to_select)
+    print(q)
     return make_response(jsonify(q.to_dict()),200)
 
 
