@@ -8,7 +8,7 @@ This work was inspired by http://blog.miguelgrinberg.com/post/designing-a-restfu
 
 # Installation
 - clone the git repo ```git clone https://github.com/web4innovation/MobileAppSeveur.git```.
-- go to backend directory ```cd web4innovation_mobile/backend```
+- go to backend directory ```cd MobileAppServeur/backend```
 - ceate a virtual environment in the same directory and name it flask: ```python3 -m venv flask```
 - install the following dependencies to the freshly prepared venv (execute the following commands one by one):
 ```

@@ -48,106 +48,79 @@ tr:nth-child(even) {
     <th>200, {
   "answers": [
     {
-      "answer_text": "first answer",
+      "answer_text": "4",
       "correct": true
     },
     {
-      "answer_text": "second answer",
+      "answer_text": "16",
       "correct": false
     }
   ],
   "id": 4,
   "owner": "test",
-  "question": "a new question"}
+  "question": "what is 2 plus 2",
+  "multiple_choice": false,
+  "tags": [
+    "math",
+    "space"]
+  }
   </th>
   </tr>
   <tr>
     <td>add a new question to the database</td>
     <td>/api/question, POST, application/json</td>
-    <td>{"question":"a new question to be added","email":"test@test.com","token":"c4033bff94b567a190e33faa551f411caef444f2","question_type":true,"answers":[{"answer_text":"my_answer to the added question","correct":true},{"answer_text":"my second answer to the added question","correct":false}]}</td>
-    <th>201, {
+    <td>{
   "answers": [
     {
-      "answer_text": "my_answer to the added question",
+      "answer_text": "4",
       "correct": true
     },
     {
-      "answer_text": "my second answer to the added question",
+      "answer_text": "16",
+      "correct": false
+    }
+  ],
+  "question": "what is 2 plus 2",
+  "multiple_choice": false,
+  "tags": [
+    "math",
+    "space"]
+  }
+    </td>
+    <th>201, {
+  "answers": [
+    {
+      "answer_text": "4",
+      "correct": true
+    },
+    {
+      "answer_text": "16",
       "correct": false
     }
   ],
   "id": 4,
   "owner": "test",
-  "question": "my second new added question"}
-  </th>
+  "question": "what is 2 plus 2",
+  "multiple_choice": false,
+  "tags": [
+    "math",
+    "space"]
+  }</th>
   </tr>
   <tr>
     <td>get question owned by a given user</td>
-    <td>/api/question/ownedby/<owner_nickname>, GET</td>
+    <td>/api/question/ownedby/&lt ownername &gt, GET</td>
     <td></td>
-    <th>200,{"result": [
-    {
-      "answers": [
-        {
-          "answer_text": "first_answer",
-          "correct": true
-        },
-        {
-          "answer_text": "second answer",
-          "correct": false
-        }
-      ],
-      "id": 1,
-      "owner": "wwisstest",
-      "question": "wiss question number 1"
-    },
-    {
-      "answers": [
-        {
-          "answer_text": "blabla answer",
-          "correct": false
-        }
-      ],
-      "id": 2,
-      "owner": "wwisstest",
-      "question": "wiss question number 2"
-    },
-    {
-      "answers": [
-        {
-          "answer_text": "my_answer to the added question",
-          "correct": true
-        },
-        {
-          "answer_text": "my second answer to the added question",
-          "correct": false
-        }
-      ],
-      "id": 3,
-      "owner": "wwisstest",
-      "question": "my new added question"
-    },
-    {
-      "answers": [
-        {
-          "answer_text": "my_answer to the added question",
-          "correct": true
-        },
-        {
-          "answer_text": "my second answer to the added question",
-          "correct": false
-        }
-      ],
-      "id": 4,
-      "owner": "wwisstest",
-      "question": "my second new added question"
-    }
-  ]}
-  </th>
+    <th>200,{"result": JSONArray containing all the question posted by this user</th>
+  </tr>
+  <tr>
+    <td>get question by tag</td>
+    <td>/api/question/bytag/&lt tag &gt, GET</td>
+    <td></td>
+    <th>200,{"result": JSONArray containing all the question having this tag </th>
   </tr>
 
 </table>
-
 </body>
 </html>
 
