@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$USER_HOME$/Desktop/web4innovation_mobile/backend/quiz_app_server_flaskViews/.idea/quiz_app_server_flaskViews.iml" filepath="$USER_HOME$/Desktop/web4innovation_mobile/backend/quiz_app_server_flaskViews/.idea/quiz_app_server_flaskViews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/quiz_app_server_flaskViews.iml" filepath="$PROJECT_DIR$/.idea/quiz_app_server_flaskViews.iml" />
     </modules>
   </component>
 </project>

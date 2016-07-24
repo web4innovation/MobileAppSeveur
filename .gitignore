@@ -1,3 +1,4 @@
+.idea*
 # Logs
 logs
 *.log
@@ -135,7 +136,7 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
+
 local_settings.py
 
 # Flask stuff:
@@ -153,7 +154,7 @@ target/
 
 # IPython Notebook
 .ipynb_checkpoints
-
+.DS_Store
 # pyenv
 .python-version
 
