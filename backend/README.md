@@ -7,7 +7,7 @@ The web server is developed using python3.4 and the flask library.
 This work was inspired by http://blog.miguelgrinberg.com/post/designing-a-restful-api-with-python-and-flask
 
 # Installation
-- clone the git repo ```git clone https://github.com/web4innovation/web4innovation_mobile.git```.
+- clone the git repo ```git clone https://github.com/web4innovation/MobileAppSeveur.git```.
 - go to backend directory ```cd web4innovation_mobile/backend```
 - ceate a virtual environment in the same directory and name it flask: ```python3 -m venv flask```
 - install the following dependencies to the freshly prepared venv (execute the following commands one by one):
