@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "run.py", line 3, in <module>
+    from quiz_app_server_flaskViews import app
+  File "/home/ec2-user/MobileAppSeveur/backend/quiz_app_server_flaskViews/__init__.py", line 2, in <module>
+    from flask_sqlalchemy import SQLAlchemy
+ImportError: No module named flask_sqlalchemy
+/home/ec2-user/MobileAppSeveur/backend/flask/lib64/python3.4/site-packages/flask_sqlalchemy/__init__.py:800: UserWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.
+  warnings.warn('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.')
+Traceback (most recent call last):
+  File "./run.py", line 4, in <module>
+    app.run(debug=True, port=80, host='0.0.0.0')
+  File "/home/ec2-user/MobileAppSeveur/backend/flask/lib64/python3.4/site-packages/flask/app.py", line 843, in run
+    run_simple(host, port, self, **options)
+  File "/home/ec2-user/MobileAppSeveur/backend/flask/lib64/python3.4/site-packages/werkzeug/serving.py", line 677, in run_simple
+    s.bind((hostname, port))
+PermissionError: [Errno 13] Permission denied
+/home/ec2-user/MobileAppSeveur/backend/flask/lib64/python3.4/site-packages/flask_sqlalchemy/__init__.py:800: UserWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.
+  warnings.warn('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.')
+ * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+ * Restarting with stat
+/home/ec2-user/MobileAppSeveur/backend/flask/lib64/python3.4/site-packages/flask_sqlalchemy/__init__.py:800: UserWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.
+  warnings.warn('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.')
+ * Debugger is active!
+ * Debugger pin code: 253-238-093
+178.203.232.7 - - [26/Jul/2016 23:23:26] "GET / HTTP/1.1" 200 -
+78.55.23.37 - - [26/Jul/2016 23:24:05] "GET /api/question/random HTTP/1.1" 200 -
+78.55.23.37 - - [26/Jul/2016 23:24:05] "GET /api/question/random HTTP/1.1" 200 -
+178.203.233.218 - - [26/Jul/2016 23:41:27] "GET / HTTP/1.1" 200 -
+178.203.233.218 - - [26/Jul/2016 23:41:27] "GET /favicon.ico HTTP/1.1" 404 -
+178.203.233.218 - - [26/Jul/2016 23:41:31] "GET / HTTP/1.1" 200 -
+ * Detected change in '/home/ec2-user/MobileAppSeveur/backend/quiz_app_server_flaskViews/views.py', reloading
+<Question 'what is the area of a square of length 3 '>
+<Question 'where do lwiss live '>
+ * Restarting with stat
+/home/ec2-user/MobileAppSeveur/backend/flask/lib64/python3.4/site-packages/flask_sqlalchemy/__init__.py:800: UserWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.
+  warnings.warn('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.')
+ * Debugger is active!
+ * Debugger pin code: 253-238-093
