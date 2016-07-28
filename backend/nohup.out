@@ -2495,3 +2495,7 @@ tyj
   warnings.warn('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.')
  * Debugger is active!
  * Debugger pin code: 253-238-093
+131.228.216.131 - - [28/Jul/2016 20:50:41] "GET /api/question/random HTTP/1.1" 200 -
+131.228.216.131 - - [28/Jul/2016 20:51:08] "GET /api/tags HTTP/1.1" 200 -
+131.228.216.131 - - [28/Jul/2016 20:51:46] "GET /api/question/bytag/math HTTP/1.1" 200 -
+131.228.216.131 - - [28/Jul/2016 20:52:17] "GET /api/tags HTTP/1.1" 200 -
