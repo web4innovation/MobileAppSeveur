@@ -2398,3 +2398,100 @@ KeyError: 'nickname'
 41.225.115.1 - - [28/Jul/2016 19:48:43] "POST /api/authenticate HTTP/1.1" 403 -
 61.216.2.13 - - [28/Jul/2016 20:15:43] "POST /404 HTTP/1.1" 404 -
 50.28.98.173 - - [28/Jul/2016 20:44:09] "GET /tiki/vendor_extra/elfinder/elfinder.html HTTP/1.1" 404 -
+ * Detected change in '/home/ec2-user/MobileAppSeveur/backend/quiz_app_server_flaskViews/views.py', reloading
+
+capitals
+test@test.com
+test@test.com
+test@test.com
+test@test.com
+test@test.com
+ccc@ccc.com
+ccc@cc.com
+w4i@test.com
+ccc@cc.com
+ccc@cc.com
+ccc@gmail.com
+ccc@gmail.com
+ccc@cc.com
+ccc@cc.com
+ccc@cc.com
+ccc@cc.com
+ccc@cc.com
+fgh
+fgh
+
+
+ccc@ccc.com
+ccc@ccc.com
+ccc@cc.com
+ccc@cc.com
+ccc@cc.com
+ccc@cc.com
+cccccc
+cccccc
+ccc@cc.com 
+ccc@cc.com 
+ccc@cc.com 
+ccc@cc.com 
+ccc@cc.com 
+ccc@cc.com 
+cccccc
+cccccc
+ccc@cc.com
+fgg
+fgg
+ccc@cc.com
+ccc@cc.com 
+ccc@cc.com 
+ccc@cc.com
+ffghh
+ffghh
+ccc@cc.com 
+ccc@cc.com 
+cc
+cc
+ccc@cc.com
+jsv
+jsv
+ccc@cc.com 
+ccc@cc.com 
+ccc@cc.com
+ccc@cc.com
+ccc@cc.com 
+ccc@cc.com 
+jsv
+jsv
+ccc@cc.com 
+ccc@cc.com 
+ccc@cc.com
+sami@gmail.com
+ccc@cc.com
+
+
+sami@gmail.com
+sami@gmail.com
+NFZLKN
+NFZLKN
+slah@hotmail
+ccc@cc.com
+nvndf
+nvndf
+nvndf
+nvndf
+nvndf
+nvndf
+nvndf
+nvndf
+nvndf
+ghj
+ghj
+ghj
+ghj
+tyj
+tyj
+ * Restarting with stat
+/home/ec2-user/MobileAppSeveur/backend/flask/lib64/python3.4/site-packages/flask_sqlalchemy/__init__.py:800: UserWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.
+  warnings.warn('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.')
+ * Debugger is active!
+ * Debugger pin code: 253-238-093

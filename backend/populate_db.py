@@ -9,15 +9,16 @@ __author__ = 'wissem'
 from json import *
 
 
-my_json_data = open('/Users/wissem/Desktop/sweng_question.json')
+my_json_data = open('/Users/wissem/Desktop/sweng_question2.json')
 my_json_array = load(my_json_data)
 # create a new user and call it web4inno_geo_addict
-user_pass = "w4i_is_awesome"
-user_pass_hash = hashlib.sha1(user_pass.encode('utf-8')).hexdigest()
-user_token = hashlib.sha1(user_pass_hash.encode('utf-8')).hexdigest()
-user = models.User(nickname="web4inno_geo_addict", email="w4i@tunes.com", token=user_token, user_mp_hash=user_pass_hash)
-db.session.add(user)
-db.session.commit()
+#user_pass = "w4i_is_awesome"
+#user_pass_hash = hashlib.sha1(user_pass.encode('utf-8')).hexdigest()
+#user_token = hashlib.sha1(user_pass_hash.encode('utf-8')).hexdigest()
+#user = models.User(nickname="web4inno_geo_addict", email="w4i@tunes.com", token=user_token, user_mp_hash=user_pass_hash)
+#db.session.add(user)
+#db.session.commit()
+user = models.User.query.filter_by(nickname='web4inno_geo_addict').first()
 for json_question in my_json_array:
     question = str(json_question['question'])
     q_type = False
