@@ -3,6 +3,7 @@ from . import app, db
 from . import models
 import hashlib
 import numpy as np
+from sqlalchemy import func
 
 
 @app.route('/')
@@ -128,17 +129,48 @@ def get_questions_ownedby(owner_nickname):
     return make_response(jsonify({"result":r}), 200)
 
 
-@app.route('/api/question/bytag/<tag_name>', methods=['GET'])
-def get_question_bytag(tag_name):
+@app.route('/api/question/bytag/<tag_name>', defaults={'limit':1}, methods=['GET'])
+@app.route('/api/question/bytag/<tag_name>/<limit>')
+def get_question_bytag(tag_name,limit):
     """
 
     :param tag_name:
     :return:
     """
     print(tag_name)
+    max_questions=20
     tag = models.Tag.query.filter_by(tag_name=tag_name).first()
     if tag:
-        r = [q.to_dict() for q in tag.quest]
+        try:
+            limit = int(limit)
+        except Exception as e:
+            pass
+        if isinstance(limit,int):
+            if limit > max_questions or limit <=0:
+                limit=max_questions
+            questions = tag.quest.order_by(func.random()).limit(limit).all()
+        elif limit=='all':
+            questions = tag.quest.all()
+        else:
+            questions = []
+        r = [q.to_dict() for q in questions]
+    else:
+        r = []
+    return make_response(jsonify({"result":r}), 200)
+
+
+@app.route('/api/tags', methods=['GET'])
+def get_tag_list():
+    """
+
+    :param tag_name:
+    :return:
+    """
+
+    tags = models.Tag.query.all()
+    if tags:
+
+        r = [t.to_dict() for t in tags]
     else:
         r = []
     return make_response(jsonify({"result":r}), 200)
