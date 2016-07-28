@@ -9,7 +9,7 @@ __author__ = 'wissem'
 from json import *
 
 
-my_json_data = open('/Users/wissem/Desktop/sweng_question2.json')
+my_json_data = open('/MobileAppServeur/backend/sweng_question2.json')
 my_json_array = load(my_json_data)
 # create a new user and call it web4inno_geo_addict
 #user_pass = "w4i_is_awesome"
