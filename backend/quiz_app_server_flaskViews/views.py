@@ -153,7 +153,10 @@ def get_question_bytag(tag_name,limit):
             questions = tag.quest.all()
         else:
             questions = []
-        r = [q.to_dict() for q in questions]
+        if len(questions)==1:
+            r = questions[0].to_dict()
+        else:
+            r = [q.to_dict() for q in questions]
     else:
         r = []
     return make_response(jsonify({"result":r}), 200)
