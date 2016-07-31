@@ -80,7 +80,7 @@ def add_new_question():
     user = models.User.query.filter_by(email=email).first()
     if user and token==user.token:  # user is authenticated then can add the question
         question = str(r['question'])
-        q_type = r['question_type']
+        q_type = r['multiple_choice']
         answers = r['answers']
         # add the question to the database
         q = models.Question(question=question, question_type=q_type, author=user)
